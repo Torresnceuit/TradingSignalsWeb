@@ -1,0 +1,23 @@
+.up .op-icon{
+    background-image: url(/assets/icons/up.png)
+}
+
+.down .op-icon{
+    background-image: url(/assets/icons/down.png)
+}
+
+.op-icon{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 100% 100%
+}
+
+.up{
+    color: green;
+}
+
+.down{
+    color: red;
+}

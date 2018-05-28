@@ -1,0 +1,41 @@
+<div>
+  <table class="table table-sm table-striped table-hover table-dark">
+    <caption>All Forex Signals</caption>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Currency</th>
+        <!-- <th>Lots</th> -->
+        <th>Open Price</th>
+        <th>Close Price</th>
+        <th>State</th>
+        <th>Profit</th>
+        <th>Open Time</th>
+        <th>Close Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let signal of signals">
+        <td>
+          
+            <display-long-short [value]="signal.Type"></display-long-short>
+          
+          {{SignalTypeMap[signal.Type]}}
+        </td>
+        <td>{{signal.Currency}}</td>
+        <td>{{signal.OpenPrice}}</td>
+        <td>{{signal.ClosePrice}}</td>
+        <td>{{StateMap[signal.State]}}</td>
+        <td>{{signal.Profit}}</td>
+        <td>{{signal.OpenTime | date:'medium'}}</td>
+        <td>
+          <div *ngIf="signal.OpenTime > signal.CloseTime;else Nan">
+            -
+          </div>
+          <ng-template #Nan>{{signal.CloseTime | date:'medium'}}</ng-template>
+        </td>
+        
+      </tr>
+    </tbody>
+  </table>
+</div>
