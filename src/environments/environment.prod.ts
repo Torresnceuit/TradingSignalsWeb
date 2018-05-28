@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  base_endpoint : "freetradingsignal.azurewebsites.net"
+  base_endpoint : "https://freeforextradingsignal.azurewebsites.net"
 };

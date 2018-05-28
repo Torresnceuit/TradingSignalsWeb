@@ -5,5 +5,6 @@
 
 export const environment = {
   production: false,
-  base_endpoint : "http://127.0.0.1:80"
+  //base_endpoint : "http://localhost:58487"
+  base_endpoint : "http://freeforextradingsignal.azurewebsites.net"
 };
